@@ -1,3 +1,4 @@
+#:nodoc:
 module ApplicationHelper
   def alert_class_for(flash_type)
     {
