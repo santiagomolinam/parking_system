@@ -1,0 +1,29 @@
+<div>
+  <%= render partial: "layouts/user_menu" %>
+</div>
+
+<h2> Locations </h2>
+
+
+<table style="width:100%" class="table-bordered table-striped">
+ <tr>
+   <th>latitude</th>
+   <th>longitude</th>
+   <th>description</th>
+   <th>max_slots</th>
+   <th>address</th>
+ </tr>
+ <% @locations.each do |v| %>
+ <tr>
+   <td><%=v.latitude%></td>
+   <td><%=v.longitude%></td>
+   <td><%=v.description%></td>
+   <td><%=v.max_slots%></td>
+   <td><%=v.address%></td>
+   <td>
+     <%= image_tag "http://maps.google.com/maps/api/staticmap?size=150x150&sensor=false&zoom=14&markers=#{v.latitude}%2C#{v.longitude}" %>
+   </td>
+ </tr>
+ <% end %>
+
+</table>

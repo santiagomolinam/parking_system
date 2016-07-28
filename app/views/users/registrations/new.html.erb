@@ -20,8 +20,23 @@
   <div class="col-md-4">
 
     <div class="field">
+      <%= f.label :Firstname %><br />
+      <%= f.text_field :first_name, autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :Lastname %><br />
+      <%= f.text_field :last_name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :Birthdate %><br />
+      <%= f.date_field :birthdate %>
+    </div>
+
+    <div class="field">
       <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: false %>
+      <%= f.email_field :email %>
     </div>
 
     <div class="field">
@@ -38,6 +53,7 @@
     </div>
 
     <div class="actions">
+      <br />
       <%= f.submit "Sign up" %>
     </div>
 
